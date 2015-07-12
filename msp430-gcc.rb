@@ -32,6 +32,9 @@ class Msp430Gcc < Formula
     ENV.remove_from_cflags '-Qunused-arguments'
     ENV.remove_from_cflags '-march=native'
     ENV.remove_from_cflags(/ ?-mmacosx-version-min=10\.\d+/)
+    ENV.remove_from_cflags '-V'
+    ENV.remove_from_cflags '-version'
+    ENV.remove_from_cflags '-qversion'
 
     # gcc must be built outside of the source directory.
     mkdir 'build' do
